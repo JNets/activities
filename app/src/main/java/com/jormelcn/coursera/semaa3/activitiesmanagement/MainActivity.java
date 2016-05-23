@@ -1,5 +1,6 @@
 package com.jormelcn.coursera.semaa3.activitiesmanagement;
 
+import android.app.DatePickerDialog;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
@@ -7,6 +8,9 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void showDatePicker(View v){
-        DialogFragment newFragment = new DatePickerFragment();
+    public void showDatePicker(View v) {
+
+        DatePickerFragment newFragment = new DatePickerFragment();
+        DatePickerFragment.setActivity(this);
         newFragment.show(getFragmentManager(), "datePicker");
     }
 

@@ -6,7 +6,7 @@ import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.widget.DatePicker;
-
+import android.view.View;
 
 import java.util.Calendar;
 
@@ -14,6 +14,14 @@ import java.util.Calendar;
  * Created by jormelcn on 22/05/16.
  */
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+
+    static MainActivity root;
+
+    public static void setActivity(MainActivity _root){
+        root = _root;
+    }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         final Calendar c = Calendar.getInstance();
@@ -24,6 +32,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     }
 
     public void onDateSet(DatePicker view, int year, int month, int day){
-        //MainActivity.fechaView.setText(view.toString());
+        TextInputEditText fechaView = (TextInputEditText) root.findViewById(R.id.tiFecha);
+        fechaView.setText(day + "/" + month + "/" + year);
     }
 }
