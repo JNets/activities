@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Registro</string>
+    <string name="name_input">Nombre Completo</string>
+    <string name="fecha_input">Fecha de Nacimiento</string>
+    <string name="tel_input">Telefono</string>
+    <string name="email_input">Email</string>
+    <string name="description_input">Descripción Contacto</string>
+    <string name="nextButton">Siguiente</string>
+    <string name="dateButton">Set Date</string>
+    <string name="editarButton">Editar Datos</string>
+</resources>
